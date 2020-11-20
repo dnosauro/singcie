@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/white" android:padding="@dimen/padding_main_activity" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4">
+    <TextView android:textSize="@dimen/font_size" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@+id/titleDialogMessage" android:background="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/insert_pin" android:minLines="2" android:fontFamily="@font/proximanova_light"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:minLines="2" android:layout_weight="0.1"/>
+        <com.cyberneid.disigon.PinEntryEditText android:textSize="@dimen/font_size" android:textColor="@color/fontPinManager" android:gravity="bottom" android:layout_gravity="bottom" android:id="@+id/pinEntry" android:background="@android:color/white" android:paddingLeft="@dimen/fab_margin" android:paddingRight="@dimen/fab_margin" android:layout_width="0dp" android:layout_height="match_parent" android:cursorVisible="false" android:maxLength="8" android:digits="1234567890" android:layout_weight="0.8" android:inputType="numberPassword" android:imeOptions="actionDone" android:textIsSelectable="false"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:minLines="2" android:layout_weight="0.1"/>
+    </LinearLayout>
+    <CheckBox android:textColor="@color/fontPinManager" android:id="@+id/checkboxFingerprint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/store_pin_fingerprint" android:maxLines="2"/>
+</LinearLayout>

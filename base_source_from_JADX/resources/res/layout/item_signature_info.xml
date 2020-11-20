@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bottom_border" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"> android:paddingTop=&quot;10dp&quot; 
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/signerIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/user_certification" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/signerText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="certificato valido" android:maxLines="4" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/codfisIcon" android:layout_width="30dp" android:layout_height="30dp" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/codfisText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:text="certificato valido" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/dateIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_action_calendar_day" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/dateText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:text="firma valida" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/signatureIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_check_circle_orange_24dp" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/signatureText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:text="firma valida" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/certificateIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_check_circle_orange_24dp" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/certificateText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:text="certificato valido" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/statusIcon" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_check_circle_orange_24dp" android:scaleType="fitCenter"/>
+        <com.wang.avi.AVLoadingIndicatorView android:layout_gravity="center_vertical" android:id="@+id/avi" android:layout_width="30dp" android:layout_height="30dp" app:indicatorColor="@android:color/black" app:indicatorName="BallClipRotateMultipleIndicator"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/statusText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="10dp" android:text="certificato valido" android:maxLines="2" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/caIcon" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/certificate_black" android:scaleType="fitCenter"/>
+        <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/caText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="certificato valido" android:maxLines="6" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+</LinearLayout>

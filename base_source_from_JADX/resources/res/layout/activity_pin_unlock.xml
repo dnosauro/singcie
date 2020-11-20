@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/EizmaTheme.AppBarOverlay" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="@dimen/action_bar_height" app:contentInsetLeft="0dp" app:contentInsetStart="0dp" app:popupTheme="@style/EizmaTheme.PopupOverlay">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="3">
+                <ImageView android:id="@+id/logo" android:padding="@dimen/logo_padding" android:layout_width="0dp" android:layout_height="match_parent" android:src="@drawable/firmo_con_cie" android:scaleType="fitCenter" android:layout_weight="2"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_pin_unlock"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

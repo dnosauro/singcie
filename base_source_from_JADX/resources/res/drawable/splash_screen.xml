@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:opacity="opaque">
+    <item>
+        <shape>
+            <gradient android:startColor="@color/splashScreenStartColor" android:endColor="@color/splashScreenEndColor" android:type="radial" android:centerX="50%" android:centerY="50%" android:gradientRadius="300dp"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/firmo_con_cie_small"/>
+    </item>
+</layer-list>

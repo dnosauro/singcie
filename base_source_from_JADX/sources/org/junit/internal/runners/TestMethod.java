@@ -1,0 +1,64 @@
+package org.junit.internal.runners;
+
+import java.lang.reflect.Method;
+import java.util.List;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+@Deprecated
+public class TestMethod {
+    private final Method method;
+    private TestClass testClass;
+
+    public TestMethod(Method method2, TestClass testClass2) {
+        this.method = method2;
+        this.testClass = testClass2;
+    }
+
+    /* access modifiers changed from: package-private */
+    public boolean expectsException() {
+        return getExpectedException() != null;
+    }
+
+    /* access modifiers changed from: package-private */
+    public List<Method> getAfters() {
+        return this.testClass.getAnnotatedMethods(After.class);
+    }
+
+    /* access modifiers changed from: package-private */
+    public List<Method> getBefores() {
+        return this.testClass.getAnnotatedMethods(Before.class);
+    }
+
+    /* access modifiers changed from: protected */
+    public Class<? extends Throwable> getExpectedException() {
+        Test test = (Test) this.method.getAnnotation(Test.class);
+        if (test == null || test.expected() == Test.None.class) {
+            return null;
+        }
+        return test.expected();
+    }
+
+    public long getTimeout() {
+        Test test = (Test) this.method.getAnnotation(Test.class);
+        if (test == null) {
+            return 0;
+        }
+        return test.timeout();
+    }
+
+    public void invoke(Object obj) {
+        this.method.invoke(obj, new Object[0]);
+    }
+
+    public boolean isIgnored() {
+        return this.method.getAnnotation(Ignore.class) != null;
+    }
+
+    /* access modifiers changed from: package-private */
+    public boolean isUnexpected(Throwable th) {
+        return !getExpectedException().isAssignableFrom(th.getClass());
+    }
+}

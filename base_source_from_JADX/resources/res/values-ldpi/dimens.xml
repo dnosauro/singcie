@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_height">40dp</dimen>
+    <dimen name="appintro_headtext_size">18sp</dimen>
+    <dimen name="button_font_size">12sp</dimen>
+    <dimen name="fab_margin">6dp</dimen>
+    <dimen name="font_size">14sp</dimen>
+    <dimen name="font_size_certificate_details">11sp</dimen>
+    <dimen name="font_size_info_app_name">16sp</dimen>
+    <dimen name="font_size_info_other">12sp</dimen>
+    <dimen name="font_size_list_signed_file">12sp</dimen>
+    <dimen name="height_item_signed_file">35dp</dimen>
+    <dimen name="padding_main_activity">15dp</dimen>
+</resources>

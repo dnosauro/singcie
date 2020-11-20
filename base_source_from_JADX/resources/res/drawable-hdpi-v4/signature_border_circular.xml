@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/disigon_cie_new_rounded_logo_semi"/>
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="#aaaaaa" android:dashWidth="10dp" android:dashGap="6dp"/>
+            <solid android:color="@color/transparent"/>
+            <size android:height="50dp" android:width="50dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@color/colorPrimaryDark" android:padding="@dimen/padding_main_activity" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/font_size_info_other" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/messageDialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/select_sign_format" android:fontFamily="@font/proximanova_light"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp">
+        <ImageView android:id="@+id/pdfImageView" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_margin="20dp" android:src="@drawable/pdf_file" android:scaleType="fitCenter"/>
+        <ImageView android:id="@+id/p7mImageView" android:layout_width="100dp" android:layout_height="wrap_content" android:layout_margin="20dp" android:src="@drawable/p7m_file" android:scaleType="fitCenter"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+JarIndex-Version: 1.0
+
+unboundid-ldapsdk-me.jar
+com
+com/unboundid
+com/unboundid/asn1
+com/unboundid/ldap
+com/unboundid/ldap/matchingrules
+com/unboundid/ldap/protocol
+com/unboundid/ldap/sdk
+com/unboundid/ldap/sdk/extensions
+com/unboundid/ldap/sdk/schema
+com/unboundid/ldif
+com/unboundid/util
+com/unboundid/util/parallel
+com/unboundid/util/ssl
+unboundid-ldapsdk-asn1.properties
+unboundid-ldapsdk-extop.properties
+unboundid-ldapsdk-ldap.properties
+unboundid-ldapsdk-ldif.properties
+unboundid-ldapsdk-matchingrules.properties
+unboundid-ldapsdk-protocol.properties
+unboundid-ldapsdk-schema.properties
+unboundid-ldapsdk-ssl.properties
+unboundid-ldapsdk-util.properties
+

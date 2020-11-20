@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/driverBar" android:background="#fff0f0f0" android:padding="10dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/storageImageView" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_storage_48pt_2x" android:layout_weight="1"/>
+        <ImageView android:id="@+id/sdImageView" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_sd_storage_black_36dp" android:layout_weight="1"/>
+        <ImageView android:id="@+id/usbImageView" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_usb_48pt_2x" android:layout_weight="1"/>
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true" app:adSize="BANNER" app:adUnitId="ca-app-pub-5320504994228344/1925328757"/>
+    <com.psaravan.filebrowserview.lib.View.FileBrowserView android:id="@+id/fileBrowserView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/adView" android:layout_below="@+id/driverBar"/>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@+id/avi" android:layout_width="50dp" android:layout_height="50dp" android:layout_centerInParent="true" app:indicatorColor="@color/colorPrimaryDarker" app:indicatorName="BallClipRotatePulseIndicator" style="@style/AVLoadingIndicatorView"/>
+</RelativeLayout>

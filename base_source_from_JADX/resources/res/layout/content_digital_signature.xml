@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/headerLayout" android:background="@color/digitalSignatureBackgroundColor" android:layout_width="match_parent" android:layout_height="80dp" android:weightSum="1" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/font_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/digitalSignatureTextView" android:background="@color/digitalSignatureBackgroundColor" android:padding="@dimen/padding_main_activity" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/digital_signature" android:layout_weight="0.8" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <RelativeLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="5dp" android:layout_marginRight="16dp" android:layout_marginBottom="5dp" android:layout_below="@+id/headerLayout">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layoutEmptyList" android:background="@android:color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_width="120dp" android:layout_height="120dp" android:src="@drawable/file_gray" android:scaleType="fitCenter"/>
+            <TextView android:textSize="@dimen/font_size" android:textColor="@color/black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/empty_file_list"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true" app:adSize="BANNER" app:adUnitId="ca-app-pub-5320504994228344/1925328757"/>
+    <ListView android:id="@+id/signedFilesList" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/adView" android:layout_below="@+id/headerLayout"/>
+</RelativeLayout>

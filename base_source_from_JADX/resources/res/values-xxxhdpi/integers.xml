@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="icon_size_button">70</integer>
+    <integer name="icon_size_info_right">160</integer>
+    <integer name="icon_size_right">200</integer>
+    <integer name="icon_size_top">300</integer>
+</resources>

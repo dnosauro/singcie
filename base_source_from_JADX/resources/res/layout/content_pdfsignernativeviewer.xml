@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/buttonPanel">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/fileNameView" android:background="@color/digitalSignatureBackgroundColor" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:weightSum="1">
+            <TextView android:textSize="@dimen/font_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/fileNameTextView" android:background="@color/digitalSignatureBackgroundColor" android:padding="@dimen/padding_main_activity" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="PutFileNameHere" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+        </LinearLayout>
+        <include layout="@layout/view_signature_panel"/>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/readLayout" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="0dp">
+            <com.github.barteksc.pdfviewer.PDFView android:id="@+id/pdfView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <RelativeLayout android:gravity="center" android:id="@+id/signaturePlaceholder" android:background="@drawable/signature_border" android:visibility="gone" android:layout_width="70dp" android:layout_height="70dp">
+                <ImageView android:layout_gravity="center" android:id="@+id/signatureIcon" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <ImageView android:id="@+id/cancelSignatureButton" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="-20dp" android:layout_marginBottom="-20dp" android:src="@drawable/ic_cancel_red_24dp" android:layout_alignLeft="@+id/signaturePlaceholder" android:layout_alignBottom="@+id/signaturePlaceholder" android:onClick="onCancelPlaceholder"/>
+            <ImageView android:id="@+id/loadImageButton" android:background="@drawable/loadimage_button_rounded" android:visibility="gone" android:layout_width="26dp" android:layout_height="26dp" android:layout_marginLeft="-20dp" android:layout_marginTop="-20dp" android:src="@drawable/photo_white_24dp" android:layout_alignLeft="@+id/signaturePlaceholder" android:layout_alignTop="@+id/signaturePlaceholder" android:onClick="onLoadImage"/>
+            <ImageView android:id="@+id/useHandButton" android:padding="2dp" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="-20dp" android:layout_marginRight="-20dp" android:src="@drawable/pen_signature_white_violet" android:layout_alignTop="@+id/signaturePlaceholder" android:layout_alignRight="@+id/signaturePlaceholder" android:onClick="onUseHand"/>
+            <ImageView android:id="@+id/expandSignatureButton" android:padding="2dp" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="-20dp" android:layout_marginBottom="-20dp" android:src="@drawable/expand" android:layout_alignRight="@+id/signaturePlaceholder" android:layout_alignBottom="@+id/signaturePlaceholder"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="60dp" android:weightSum="4" android:layout_alignParentBottom="true" style="?android:attr/buttonBarStyle">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonCancelLayout" android:background="@color/colorControl" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" style="?android:attr/buttonBarButtonStyle">
+            <ImageButton android:textSize="@dimen/font_size" android:textColor="@color/fontGray" android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonCancel" android:background="@color/colorControl" android:layout_width="0dp" android:layout_height="30dp" android:src="@drawable/ic_arrow_back_white_24dp" android:scaleType="fitCenter" android:layout_weight="1" style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonSignLayout" android:background="@color/colorPrimaryDark" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3.3" style="?android:attr/buttonBarButtonStyle">
+            <Button android:textSize="@dimen/font_size" android:textColor="@color/fontColor" android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonSign" android:background="@color/colorPrimaryDark" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/button_sign" android:textAllCaps="false" android:fontFamily="@font/proximanova_light" style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/signatureLayout" android:background="@drawable/signature_pad_border" android:visibility="gone" android:layout_width="match_parent" android:layout_height="150dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentBottom="true">
+            <TextView android:textSize="12sp" android:textColor="@color/fontGray" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="16dp" android:layout_marginTop="5dp" android:text="@string/signature"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="center" android:layout_width="40dp" android:layout_height="match_parent" android:layout_marginBottom="10dp" android:src="@drawable/pen_signature_black" android:scaleType="fitCenter"/>
+                <com.github.gcacace.signaturepad.views.SignaturePad android:id="@+id/signature_pad" android:layout_width="match_parent" android:layout_height="match_parent" app:penMaxWidth="3dp" app:penMinWidth="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_check_circle_green_24dp" android:onClick="onSignatureOK"/>
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_remove_circle_yellow_24dp" android:onClick="onSignatureClear"/>
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_cancel_red_24dp" android:onClick="onSignatureCancel"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/aviView" android:background="@color/colorPrimaryDarkSemiTransparent" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.wang.avi.AVLoadingIndicatorView android:id="@+id/avi" android:layout_width="100dp" android:layout_height="100dp" android:layout_centerInParent="true" app:indicatorColor="@android:color/black" app:indicatorName="BallClipRotateMultipleIndicator"/>
+    </RelativeLayout>
+</RelativeLayout>

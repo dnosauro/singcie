@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="0dp" android:weightSum="5" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@+id/cancelButton" android:background="@color/colorControl" android:padding="10dp" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_arrow_back_white_24dp" android:scaleType="fitCenter" android:layout_weight="1" style="?android:attr/buttonBarButtonStyle"/>
+        <ImageButton android:id="@+id/addButton" android:background="@color/colorPrimaryDarker" android:padding="10dp" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_add_white_24dp" android:scaleType="fitCenter" android:layout_weight="2" style="?android:attr/buttonBarButtonStyle"/>
+        <ImageButton android:id="@+id/saveButton" android:background="@color/pinManagerBackgroundColor" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_check_white" android:layout_weight="2" style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp" android:layout_above="@+id/buttonPanel" app:adSize="BANNER" app:adUnitId="ca-app-pub-5320504994228344/1925328757"/>
+    <ListView android:id="@+id/pageListView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/adView" android:layout_alignParentTop="true"/>
+</RelativeLayout>

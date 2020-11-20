@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/titlePanel" android:background="@color/digitalSignatureBackgroundColor" android:layout_width="match_parent" android:layout_height="80dp" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/font_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/verifyTextView" android:background="@color/digitalSignatureBackgroundColor" android:padding="@dimen/padding_main_activity" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/verify_signature" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/verifySign" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_below="@+id/titlePanel">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font_size_certificate_details" android:textStyle="bold" android:textColor="@color/fontGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filename" android:fontFamily="@font/proximanova_light"/>
+            <TextView android:textSize="@dimen/font_size_certificate_details" android:textColor="@color/fontGray" android:id="@+id/fileName" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="@font/proximanova_light"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:textSize="@dimen/font_size_certificate_details" android:textStyle="bold" android:textColor="@color/fontGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nr_signers" android:fontFamily="@font/proximanova_light"/>
+            <TextView android:textSize="@dimen/font_size_certificate_details" android:textColor="@color/fontGray" android:id="@+id/nrSigners" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+        </LinearLayout>
+        <TextView android:textSize="@dimen/font_size_certificate_details" android:textStyle="bold" android:textColor="@color/fontGray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/signatures" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <ListView android:id="@+id/signerListView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_above="@+id/buttonPanel" android:layout_below="@+id/verifySign"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/buttonPanel" android:layout_width="match_parent" android:layout_height="60dp" android:weightSum="4" android:layout_weight="0.7" android:layout_alignParentBottom="true" android:measureWithLargestChild="true" style="?android:attr/buttonBarStyle">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonCancelLayout" android:background="@color/colorControlDarker" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7" style="?android:attr/buttonBarButtonStyle">
+            <ImageButton android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonCancel" android:background="@color/colorControl" android:padding="@dimen/bottom_bar_padding" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_arrow_back_white_24dp" android:scaleType="fitCenter" style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/buttonSignLayout" android:background="@color/colorAccent" android:layout_width="0dp" android:layout_height="match_parent" android:weightSum="1" android:layout_weight="3.3" style="?android:attr/buttonBarButtonStyle">
+            <Button android:textSize="@dimen/button_font_size" android:textColor="@color/fontColor" android:id="@+id/buttonSign" android:background="@color/colorAccent" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/action_open" android:layout_weight="0.6" android:textAllCaps="false" android:fontFamily="@font/proximanova_light" style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/aviView" android:background="@color/colorPrimaryDarkSemiTransparent" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.wang.avi.AVLoadingIndicatorView android:id="@+id/avi" android:layout_width="100dp" android:layout_height="100dp" android:layout_centerInParent="true" app:indicatorColor="@android:color/black" app:indicatorName="BallClipRotateMultipleIndicator"/>
+    </RelativeLayout>
+</RelativeLayout>

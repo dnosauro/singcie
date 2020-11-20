@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:background="@color/colorPrimaryDark" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageButton android:layout_gravity="center" android:id="@+id/selectButton" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/gallery" android:layout_weight="1"/>
+        <ImageButton android:layout_gravity="center" android:id="@+id/cameraButton" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/camera" android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/fingerprint_container" android:background="@color/colorPrimaryDark" android:paddingTop="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="24dp" android:paddingEnd="24dp">
+    <TextView android:textAppearance="@style/TextAppearance.Material.Subhead" android:textColor="@color/fontColor" android:id="@+id/fingerprint_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fingerprint_description"/>
+    <ImageView android:id="@+id/fingerprint_icon" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="20dp" android:src="@drawable/fingerprint_white"/>
+    <TextView android:textColor="@color/fontColor" android:gravity="center_vertical" android:id="@+id/fingerprint_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/fingerprint_hint" style="@style/TextAppearance.Material.Body1"/>
+</LinearLayout>

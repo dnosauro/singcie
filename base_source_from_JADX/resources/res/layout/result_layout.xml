@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/topBar" android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageButton android:textColor="@android:color/white" android:id="@+id/cancelButton" android:background="@color/colorControl" android:padding="10dp" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_arrow_back_white_24dp" android:scaleType="centerInside" android:layout_weight="1"/>
+        <ImageButton android:textColor="@android:color/white" android:id="@+id/original" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_image" android:layout_weight="1"/>
+        <ImageButton android:textColor="@android:color/white" android:id="@+id/magicColor" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_enhamce_image" android:singleLine="true" android:layout_weight="1"/>
+        <ImageButton android:textColor="@android:color/white" android:id="@+id/grayMode" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_gray" android:singleLine="true" android:layout_weight="1"/>
+        <ImageButton android:textColor="@android:color/white" android:id="@+id/BWMode" android:background="@android:color/transparent" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_black_and_white" android:singleLine="true" android:layout_weight="1"/>
+        <ImageButton android:id="@+id/doneButton" android:background="@color/colorPrimaryDarker" android:layout_width="0dp" android:layout_height="50dp" android:src="@drawable/ic_check_white" android:singleLine="true" android:layout_weight="1"/>
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/scanPadding" android:layout_above="@+id/topBar" android:layout_alignParentTop="true">
+        <ImageView android:layout_gravity="center" android:id="@+id/scannedImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/scanPadding"/>
+    </FrameLayout>
+</RelativeLayout>

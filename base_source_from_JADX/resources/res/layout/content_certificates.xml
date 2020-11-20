@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/headerLayout" android:background="@color/digitalSignatureBackgroundColor" android:layout_width="match_parent" android:layout_height="80dp" android:weightSum="1" android:layout_alignParentTop="true">
+        <TextView android:textSize="@dimen/font_size" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/certificatesTextView" android:background="@color/digitalSignatureBackgroundColor" android:padding="@dimen/padding_main_activity" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/certificates" android:layout_weight="0.8" android:fontFamily="@font/proximanova_light"/>
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView android:id="@+id/adView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true" app:adSize="BANNER" app:adUnitId="ca-app-pub-5320504994228344/1925328757"/>
+    <ListView android:id="@+id/certificatesList" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/adView" android:layout_below="@+id/headerLayout"/>
+</RelativeLayout>

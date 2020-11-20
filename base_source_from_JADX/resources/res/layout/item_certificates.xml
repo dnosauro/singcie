@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@color/colorAccent" android:layout_width="match_parent" android:layout_height="@dimen/height_item_signed_file" android:weightSum="8">
+    <ImageView android:id="@+id/iconCertificate" android:background="@android:color/white" android:padding="@dimen/padding_main_activity" android:layout_width="@dimen/height_item_signed_file" android:layout_height="@dimen/height_item_signed_file" android:layout_marginTop="2dp" android:src="@drawable/user_certification"/>
+    <TextView android:textSize="@dimen/font_size_list_signed_file" android:textStyle="bold" android:textColor="@color/colorTextToolBar" android:gravity="center_vertical" android:id="@+id/certificateUsername" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="@dimen/height_item_signed_file" android:layout_marginTop="2dp" android:maxLines="1" android:fontFamily="@font/proximanova_light"/>
+</LinearLayout>
